@@ -50,10 +50,10 @@ function showTab(tabId) {
       alert("Your message has been saved ✅");
       document.getElementById("contactForm").reset();
     } else {
-      alert("Something went wrong ❌");
+      alert("Something Went Wrong ❌");
     }
   } catch (err) {
     console.error(err);
-    alert("Error connecting to server ❌");
+    alert("Error Connecting to Server ❌");
   }
 });
