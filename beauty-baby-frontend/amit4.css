@@ -1,0 +1,454 @@
+.custom-navbar-bg {
+    background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+    width: 100%;
+}
+
+#gradient-text {
+      font-size: 30px;
+      margin-top: 100px;
+      font-weight: bold;
+      font-style: italic;
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(45deg, #0000ff, #f6c253, yellow, #0000ff, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .carousel-item {
+      height: 80vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .carousel-item::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(31, 30, 30, 0.6);
+      z-index: 1;
+    }
+
+    .carousel-caption {
+      z-index: 2;
+    }
+
+    .carousel-caption h1 {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+
+    .carousel-caption p {
+      font-size: 1.25rem;
+    }
+
+    .carousel-caption .btn {
+      margin-top: 1rem;
+    }
+    
+    .navbar-bran{
+        height: 100px;
+        width: 100%;
+    }
+
+/* ...existing code... */
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffb347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: background 0.4s;
+}
+
+/* Optional: Make all nav links bold */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: larger;
+    position: relative;
+    transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+    padding: 8px 22px;
+    border-radius: 30px;
+}
+
+/* Button-style gradient hover effect */
+.navbar-nav .nav-link.active:hover,
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.15);
+    border-radius: 5px;
+    -webkit-background-clip: border-box;
+    font-size: 1.08em;
+    text-shadow: 0 2px 8px rgba(255, 105, 180, 0.15);
+    -webkit-text-fill-color: unset;
+    background-clip: border-box;
+}
+
+/* ...existing code... */
+
+    .about-section {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 10%;
+        background-color: #f9f9f9;
+      }
+  
+      .about-left {
+        margin-top: 30px;
+        flex: 1;
+        min-width: 300px;
+        margin-right: 40px;
+      }
+  
+      .about-right {
+        flex: 1;
+        min-width: 300px;
+      }
+  
+      .about-left h1 {
+        color: #0a0a0a;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: bold;
+        /* margin-bottom: 20px; */
+      }
+  
+      .tabs {
+        display: flex;
+        margin-bottom: 20px;
+      }
+  
+      .tab-btn {
+        padding: 10px 20px;
+        border: none;
+        color: #fff;
+        /* background-color: #000000; */
+         background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-right: 5px;
+      }
+  
+      .tab-btn:hover {
+        /* background-color: #ffb347; */
+         background: linear-gradient(90deg, #0c0c0c,  #ffb347, rgb(1, 1, 111));
+        color: #fff;
+      }
+  
+      .tab-content {
+        display: none;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+  
+      .tab-content.active {
+        display: block;
+      }
+  
+      .tab-content h3 {
+        margin-top: 0;
+      }
+  
+      .tab-content p {
+        color: #444;
+        line-height: 1.6;
+      }
+  
+      .tab-content .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        /* background-color: #010101; */
+         background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .tab-content .btn:hover {
+        background: linear-gradient(90deg, #0c0c0c,  #ffb347, rgb(1, 1, 111));
+      }
+  
+      .about-right img {
+        margin-top: 60px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+  
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .services-section {
+        padding: 50px 0;
+        background-color: #f8f9fa;
+      }
+  
+      .service-card {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 40px 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+      }
+  
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+  
+      .service-content {
+        position: relative;
+        z-index: 2;
+      }
+  
+      .service-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+  
+      .service-card h5 {
+        font-weight: bold;
+      }
+  
+      .service-card p {
+        font-size: 0.9rem;
+        margin: 10px 0;
+      }
+  
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+  
+      .btn-read-more {
+        background-color: #fff;
+        color: #000;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 5px;
+        border: none;
+        transition: background-color 0.3s;
+      }
+  
+      .btn-read-more:hover {
+        background-color: #ffb347;
+        color: #fff;
+      }
+
+      .projects-section {
+        padding: 40px 20px;
+        text-align: center;
+      }
+  
+      .projects-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+  
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+  
+      .tab {
+        padding: 10px 20px;
+        /* background-color: #ddd; */
+        color: #fff;
+        background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+  
+      .tab:hover {
+        background: linear-gradient(90deg, #0c0c0c,  #ffb347, rgb(1, 1, 111));
+        color: #fff;
+      }
+  
+      .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+  
+      .project-item {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+  
+      .project-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+  
+      .project-item:hover img {
+        transform: scale(1.1);
+      }
+  
+      .overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+  
+      .project-item:hover .overlay {
+        opacity: 1;
+      }
+  
+      .overlay h5 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+  
+      .overlay p {
+        font-size: 0.9rem;
+      }
+  
+      /* Staggered layout */
+      .row-1 .project-item:nth-child(1),
+      .row-1 .project-item:nth-child(3),
+      .row-2 .project-item:nth-child(1),
+      .row-2 .project-item:nth-child(3) {
+        margin-top: 40px;
+      }
+  
+      .row-1 .project-item:nth-child(2),
+      .row-2 .project-item:nth-child(2) {
+        margin-top: 0px;
+      }
+  
+      @media (max-width: 768px) {
+        .project-item {
+          width: 90%;
+        }
+      }
+
+      .contact-section {
+        padding: 80px 20px;
+      }
+  
+      .contact-card {
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
+  
+      .contact-form {
+        padding: 40px;
+        font-weight: bold;
+      }
+  
+      .contact-form h2 {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+  
+      .contact-form .form-control {
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+  
+      .contact-map {
+        position: relative;
+        height: 100%;
+      }
+  
+      .contact-map iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+  
+      .contact-info {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+  
+      .contact-info h5 {
+        margin-bottom: 10px;
+      }
+  
+      .contact-info p {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+  
+      @media (max-width: 768px) {
+        .contact-form, .contact-map {
+          padding: 20px;
+        }
+  
+        .contact-info {
+          position: static;
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+
+      .contact-form .btn{
+        background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+        height: 50px;
+      }
+
+      .contact-form .btn:hover {
+        background: linear-gradient(90deg, #0c0c0c,  #ffb347, rgb(1, 1, 111));
+      }
+
+
+    .footer {
+        background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));
+    }
+
+    #text-design {
+      font-size: 50px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #0000ff, #f6c253, #0000ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
