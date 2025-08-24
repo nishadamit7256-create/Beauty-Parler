@@ -1,0 +1,186 @@
+/* Modal container */
+.auth-modal-dialog {
+  max-width: 500px;
+}
+.auth-modal-sm {
+  max-width: 500px;
+}
+
+.auth-modal-content {
+  position: relative;
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  background: transparent; /* background ab transparent */
+}
+
+/* ==== Background image layer ==== */
+.auth-modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('ab4.jpg') center/cover no-repeat; /* login/register image */
+  filter: blur(8px); 
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Dark overlay on top of background */
+.auth-modal-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* Card / Content */
+.auth-card {
+  position: relative;
+  z-index: 2;   /* content clear, background se upar */
+  min-height: 460px;
+  perspective: 1200px;
+  padding: 28px;
+  display: grid;
+  place-items: center;
+}
+
+/* Flip Faces */
+.auth-card-face {
+  position: absolute;
+  width: 92%;
+  max-width: 520px;
+  background: transparent;   /* ❌ pehle white tha, ab transparent */
+  border-radius: 18px;
+  padding: 26px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .6s ease;
+  color: #fff; /* text safed rahe for contrast */
+}
+
+.auth-card-front { transform: rotateY(0deg); }
+.auth-card-back  { transform: rotateY(180deg); }
+
+.auth-flip-toggle { display:none; }
+.auth-flip-toggle:checked ~ .auth-card-front { transform: rotateY(-180deg); }
+.auth-flip-toggle:checked ~ .auth-card-back  { transform: rotateY(0deg); }
+
+.auth-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.auth-link { cursor: pointer; text-decoration: underline; color: #ffd65a; }
+.auth-switch { text-align: center; margin-bottom: 0; }
+
+/* ==== Change Password Modal Background ==== */
+#changePasswordModal .auth-modal-content {
+  position: relative;
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  background: transparent; /* transparent hi rahe */
+}
+
+/* Blur background image */
+#changePasswordModal .auth-modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('ab4.jpg') center/cover no-repeat; /* same image ya alag rakh sakte */
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Dark overlay for readability */
+#changePasswordModal .auth-modal-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* Content clear dikhne ke liye */
+#changePasswordModal .p-4 {
+  position: relative;
+  z-index: 2;     /* background ke upar */
+  color: #fff;    /* text safed */
+}
+
+/* Input fields styling */
+#changePasswordModal .form-control {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+}
+
+#changePasswordModal .form-control::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Button styling */
+#changePasswordModal .btn-dark {
+  background: #000;
+  border: none;
+}
+
+#changePasswordModal .btn-outline-secondary {
+  border: 1px solid #ccc;
+  color: #fff;
+}
+
+
+@media (max-width: 576px){
+  .auth-card-face{ width: 100%; padding: 18px; }
+}
+
+/* Triple Flip Faces */
+.auth-card-face {
+  position: absolute;
+  width: 92%;
+  max-width: 520px;
+  background: transparent;
+  border-radius: 18px;
+  padding: 26px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  color: #fff;
+}
+
+/* === Auth Buttons Gradient Styling === */
+.auth-modal-content .btn-dark {
+  background: linear-gradient(90deg, #0c0c0c, rgb(1, 1, 111));  /* Orange → Peach */
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+
+.auth-modal-content .btn-dark:hover {
+  background: linear-gradient(90deg, #0c0c0c,  #ffb347, rgb(1, 1, 111)); /* Green → Blue */
+  transform: translateY(-2px);
+}
+
+/* Default states */
+#flipLogin:checked ~ .auth-card-front { transform: rotateY(0deg); }
+#flipLogin:checked ~ .auth-card-back,
+#flipLogin:checked ~ .auth-card-reset { transform: rotateY(180deg); }
+
+#flipRegister:checked ~ .auth-card-back { transform: rotateY(0deg); }
+#flipRegister:checked ~ .auth-card-front,
+#flipRegister:checked ~ .auth-card-reset { transform: rotateY(-180deg); }
+
+#flipReset:checked ~ .auth-card-reset { transform: rotateY(0deg); }
+#flipReset:checked ~ .auth-card-front,
+#flipReset:checked ~ .auth-card-back { transform: rotateY(-180deg); }
+
